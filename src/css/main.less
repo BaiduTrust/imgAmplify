@@ -1,0 +1,120 @@
+@img-expand-prefix: img-expand;
+@s-img-width: 80px; /* 小图宽度 */
+@s-img-height: 80px; /* 小图高度 */
+@expand-background: #f6f6f6; /* 图片展开区域背景色 */
+
+/* 注意以下cursor路径为绝对路径 */
+@big-cur-url: '/src/css/img/big.cur';
+@small-cur-url: '/src/css/img/small.cur';
+@prev-cur-url: '/src/css/img/prev.cur';
+@next-cur-url: '/src/css/img/next.cur';
+
+.imgList {
+    a {
+        display: inline-block;
+        width: @s-img-width;
+        height: @s-img-width;
+        overflow: hidden;
+        border: solid 1px #fafafa;
+        background: url(img/loading.gif) no-repeat center;
+
+        &:hover {
+            border-color: #ff8237;
+        }
+
+        img {
+            width: @s-img-width;
+            height: @s-img-width;
+            cursor: url(@big-cur-url), pointer;
+            border: none;
+        }
+    }
+}
+
+.clearfix() {
+    &:after {
+        content: ".";
+        clear: both;
+        display: block;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    zoom: 1;
+}
+
+.@{img-expand-prefix}-container {
+    border: solid 1px #ececec;
+    background: @expand-background;
+    padding: 30px 30px 25px;
+    margin: 5px 0 15px;
+    border-radius: 3px;
+}
+
+.@{img-expand-prefix}-main-img {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: url(@small-cur-url), pointer;
+
+    &.loading {
+        background: url(img/b-loading.gif) no-repeat center;
+    }
+
+    &.prev {
+        cursor: url(@prev-cur-url), pointer;
+    }
+
+    &.next {
+        cursor: url(@next-cur-url), pointer;
+    }
+
+    img {
+        width: 100%;
+        border: none;
+    }
+}
+
+.@{img-expand-prefix}-small-img {
+    .clearfix();
+    padding: 0;
+    margin: 0;
+
+    li {
+        float: left;
+        margin: 0 5px 0 0;
+        padding: 0;
+        border: none;
+
+        a {
+            display: inline-block;
+            border: solid 2px @expand-background;
+            width: @s-img-width;
+            height: @s-img-height;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+
+            &.current,
+            &:hover {
+                border-color: #ff8237;
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        }
+
+        img {
+            width: @s-img-width;
+            height: @s-img-width;
+            border: none;
+        }
+    }
+}
+
+.@{img-expand-prefix}-full-screen {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url(img/full-screen.png) no-repeat;
+}
