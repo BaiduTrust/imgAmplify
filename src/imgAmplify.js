@@ -204,6 +204,7 @@ define(function (require) {
 
             if (index < 0 || index > this.bUrls.length - 1) {
                 this.hide();
+                return;
             }
 
             if (!this.imgLoading) {
