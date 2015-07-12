@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>imgAmplify</title>
+    <link rel="stylesheet" href="../src/css/main.less">
+</head>
+<body>
+    <div style="width:800px;text-align:left">
+        电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！电脑修的好，胚胎当到老！
+        <div class="imgList" data-img-type="imgAmplify">
+            <a href="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg" target="_blank" data-rotate="0">
+                <div>
+                    <img src="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg" data-orimg="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg>" alt="">
+                </div>
+            </a>
+            <a href="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg" target="_blank" data-rotate="0">
+                <div>
+                    <img src="http://www.qiye.gov.cn/news/UploadFiles_7577/201111/20111116111700520.jpg" data-orimg="http://www.qiye.gov.cn/news/UploadFiles_7577/201111/20111116111700520.jpg" alt="">
+                </div>
+            </a>
+            <a href="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg" target="_blank" data-rotate="0">
+                <div>
+                    <img src="http://poto.kikicici.com/up_files/2011-09-08/2d4acda4e2.jpg" data-orimg="http://poto.kikicici.com/up_files/2011-09-08/2d4acda4e2.jpg" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
+    <script src="../dep/jquery-1.9.0.js"></script>
+    <script>
+        require.config({
+            'baseUrl': '../src',
+            'paths': {
+                css: '../dep/css',
+                text: '../dep/text'
+            },
+            'packages': [
+                {
+                    'name': 'etpl',
+                    'location': '../dep/etpl/2.1.0/src',
+                    'main': 'main'
+                },
+                {
+                    'name': 'imgAmplify',
+                    'location': '.',
+                    'main': 'main'
+                }
+            ]
+        });
+
+        $(document).ready(function() {
+            require(['imgAmplify'], function (imgAmplify) {
+                    imgAmplify.init();
+                }
+            );
+        });
+    </script>
+</body>
+</html>

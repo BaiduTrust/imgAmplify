@@ -7,14 +7,16 @@
 define(function (require) {
     var ImgAmplify = require('./imgAmplify');
 
-    function init() {
+    function init(opts) {
         var imgLists = $('div[data-img-type="imgAmplify"]');
 
         imgLists.each(function (index, item) {
-            new ImgAmplify({
+            var obj = {
                 expandPrefix: 'img-expand',
                 source: item
-            });
+            };
+            $.extend(obj, opts);
+            new ImgAmplify(obj);
         });
     }
 
