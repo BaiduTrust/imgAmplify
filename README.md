@@ -1,9 +1,10 @@
 # imgAmplify
 
-<img src="tmp/screenshot_1.png" width="600">
-<img src="tmp/screenshot_2.png" width="600">
+## 简介
 
 类似微博的图片查看组件，支持展开、收起、查看原图功能。
+
+<img src="tmp/screenshot_1.png" width="600">
 
 ## 使用方法
 
