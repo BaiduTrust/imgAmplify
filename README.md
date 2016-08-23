@@ -1,7 +1,5 @@
 # imgAmplify
 
-## 简介
-
 类似微博的图片查看组件，支持展开、收起、查看原图功能。
 
 <img src="tmp/screenshot_1.png" width="600">
