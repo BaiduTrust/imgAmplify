@@ -3,11 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <title>imgAmplify</title>
-    <link rel="stylesheet" href="../src/css/main.less">
+    <link rel="stylesheet" href="../src/main.less">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            width: 660px;
+            padding: 40px;
+            margin: 20px auto;
+            border: 1px solid #ececec;
+            background-color: #fff;
+        }
+
+        p {
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div style="width:660px;text-align:left;">
-        <p style="margin-bottom:10px;line-height:1.4;">朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！朝霞好萌！我要给你生猴子！</p>
+    <div id="container">
+        <p>百度口碑个人觉得还是比较有用的，在这里可以对同类型的网站进行对比，然后挑选出自己最喜欢的网站，自己的一点使用体验还可以给大家来参考，感觉还是很有意义的哇。作为一个选择恐惧症，确实帮助了很多！
+特别喜欢那个奖品设立，但是分值有些高，拿一个iPad的需要评论大概50000-60000条。哈哈，不过综合来讲，还是觉得赞一个！</p>
         <div class="imgList" data-img-type="imgAmplify">
             <a href="http://ww2.sinaimg.cn/bmiddle/af0d43ddjw1eg9hf16ojyj20c8085gn4.jpg" target="_blank" data-rotate="0">
                 <div>
@@ -44,17 +68,18 @@
                     <img src="http://poto.kikicici.com/up_files/2011-09-08/2d4acda4e2.jpg" data-orimg="http://poto.kikicici.com/up_files/2011-09-08/2d4acda4e2.jpg" alt="">
                 </div>
             </a>
+            <a href="http://img6.hao123.com/data/desktop/f94f79cc1f1284188e12820a88e6508b_1366_768" target="_blank" data-rotate="0">
+                <div>
+                    <img src="http://img6.hao123.com/data/desktop/f94f79cc1f1284188e12820a88e6508b_1366_768" data-orimg="http://img6.hao123.com/data/desktop/f94f79cc1f1284188e12820a88e6508b_1366_768" alt="">
+                </div>
+            </a>
         </div>
     </div>
     <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-6-10/esl.js"></script>
-    <script src="../dep/jquery-1.9.0.js"></script>
+    <script src="../dep/jquery/jquery-1.9.0.js"></script>
     <script>
         require.config({
             'baseUrl': '../src',
-            'paths': {
-                css: '../dep/css',
-                text: '../dep/text'
-            },
             'packages': [
                 {
                     'name': 'etpl',

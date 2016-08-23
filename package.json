@@ -1,0 +1,11 @@
+{
+    "name": "imgAmplify",
+    "version": "0.1",
+    "description": "类似微博的图片查看组件",
+    "author": [
+        "lizhaoxia@baidu.com",
+        "chengong03@baidu.com",
+        "wuqi03@baidu.com"
+    ],
+    "license": "ISC"
+}

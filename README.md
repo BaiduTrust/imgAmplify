@@ -1,19 +1,25 @@
-imgAmplify
-=======
+# imgAmplify
 
-类似微博的图片查看组件
+<img src="tmp/screenshot_1.png" width="600">
+<img src="tmp/screenshot_2.png" width="600">
 
-### 依赖
+类似微博的图片查看组件，支持展开、收起、查看原图功能。
 
-Jquery-1.9.1
+## 使用方法
 
-etpl
+```javascript
 
-### 折叠小图
+var imgAmplify = require('imgAmplify');
 
-<img src="doc/img/fold.png" />
+imgAmplify.init({
+    main: '#container' // 初始化的范围（可选，默认是body）
+    scrollElem: '.scroll-container' // 如果当前可滚动的元素不是body，则需要设置(可选，默认是body)
+    expandPrefix: 'kb-' // class前缀（可选，默认是img-expand）
+});
 
-### 展开大图
+```
 
-<img src="doc/img/unfold.png" />
+## 依赖
 
+- jquery-1.9.0
+- etpl

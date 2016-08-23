@@ -1,9 +1,0 @@
-{
-    "etpl": {
-        "2.1.0": {
-            "name": "etpl",
-            "version": "2.1.0",
-            "main": "main"
-        }
-    }
-}

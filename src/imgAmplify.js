@@ -2,7 +2,7 @@
  * @file 图片放大主模块
  * @author lizhaoxia(lizhaoxia@baidu.com)
  *         chengong03(chengong03@baidu.com)
- * @date 2014-05-14
+ * @date 2018-08-23
  */
 
 define(function (require) {
@@ -648,8 +648,20 @@ define(function (require) {
             // TODO 简单处理下，后期改为事件处理
             var offsetTopFix = this.offsetTop || 0;
             var offsetTop = $(target).offset().top;
-            if ($(document).scrollTop() > offsetTop - offsetTopFix) {
-                $(document).scrollTop(offsetTop - 25 - offsetTopFix);
+
+            if (this.scrollElem && $(this.scrollElem).size()) {
+                var scrollElem = $(this.scrollElem);
+                var scrollElemOffsetTop = scrollElem.offset().top;
+                var scrollTop = scrollElem.scrollTop();
+
+                if (offsetTop < scrollElemOffsetTop) {
+                    scrollElem.scrollTop(scrollTop - scrollElemOffsetTop + offsetTop - offsetTopFix);
+                }
+            }
+            else {
+                if ($(document).scrollTop() > offsetTop - offsetTopFix) {
+                    $(document).scrollTop(offsetTop - offsetTopFix);
+                }
             }
         }
     };

@@ -90,21 +90,18 @@
 }
 
 .@{img-expand-prefix}-container {
+    .no-select();
     border: solid 2px #f6f6f5;
     background: @expand-background;
     margin: 5px 0 15px;
     border-radius: 4px;
     position: relative;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-         ms-user-select: none;
-            user-select: none;
 }
 
 .@{img-expand-prefix}-action {
     .clearfix();
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 20px 8px 20px;
     margin-bottom: 10px;
     color: #a5a5a5;
     font-size: 14px;
